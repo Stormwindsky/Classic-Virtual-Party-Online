@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connection Notice</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #111827;
+      margin: 0;
+    }
+
+    /* Overlay background */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 9999;
+    }
+
+    /* Modal box */
+    .modal-box {
+      background: #ffffff;
+      max-width: 440px;
+      width: 100%;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: #1f2937;
+    }
+
+    .modal-box h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: #111827;
+    }
+
+    .modal-box p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #4b5563;
+      margin: 0 0 20px;
+    }
+
+    .btn-continue {
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s;
+    }
+
+    .btn-continue:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Connection Privacy Notice Modal -->
+  <div id="ip-notice-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <h2 id="modal-title">Connection &amp; Privacy Notice</h2>
+      <p>
+        This app is an independent project. Because I do not have the budget to pay for private relay servers, it uses <strong>PeerJS</strong> to connect users directly to each other. 
+        <br><br>
+        Please note that this means <strong>your IP address will be visible</strong> to the person you connect with. By clicking <strong>Continue</strong>, you understand and accept this.
+      </p>
+      <button id="accept-btn" class="btn-continue">Continue</button>
+    </div>
+  </div>
+
+  <script>
+    const acceptBtn = document.getElementById('accept-btn');
+
+    acceptBtn.addEventListener('click', () => {
+      // Redirects immediately to your app
+      window.location.href = 'https://stormwindsky.github.io/Classic-Virtual-Party-Online/';
+    });
+  </script>
+
+</body>
+</html>
